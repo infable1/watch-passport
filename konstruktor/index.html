@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Конструктор часов «Луч»</title>
+  <meta name="description" content="Соберите свои часы «Луч»: индикация, корпус, циферблат, ремешок, «Луч Pay» и гравировка — и сразу увидьте их в 3D." />
+  <meta name="theme-color" content="#F6F6F6" />
+  <!-- экран выбора «Наручные / Карманные» без мигания конструктора: то же условие, что needsChooser() в src/chooser.js -->
+  <script>if (!new URLSearchParams(location.hash.slice(1)).has('indication')) document.documentElement.classList.add('choosing');</script>
+  <script type="module" crossorigin src="./assets/main-BlZ4WI8t.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/options-BJAj_i4-.js">
+  <link rel="stylesheet" crossorigin href="./assets/options-CIHbVmzf.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="logo" href="#" aria-label="Луч 1953">
+      <img src="./brand/logo-mark-1953.svg" alt="Луч 1953" width="92" height="56" />
+    </a>
+    <nav class="nav">
+      <a href="#" data-i18n="nav.about">О нас</a><a href="#" data-i18n="nav.steps">Этапы работы</a><a href="#" data-i18n="nav.quote">Запрос стоимости</a><a href="#" data-i18n="nav.contacts">Контакты</a>
+    </nav>
+    <div class="top-right">
+      <a class="phone" href="#">+375 17 000 00 00</a>
+      <div class="langs" role="group" aria-label="Язык / Language">
+        <button class="lang" type="button" data-lang="ru">RU</button><button class="lang" type="button" data-lang="be">BY</button><button class="lang" type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="chooser" hidden aria-labelledby="chooser-title">
+    <h1 id="chooser-title" data-i18n="choose.title">Какие часы собираем?</h1>
+    <p class="lead" data-i18n="choose.lead">Выберите тип — дальше соберёте часы по шагам и сразу увидите их в 3D</p>
+    <div class="chooser-cards">
+      <button class="chooser-card" type="button" data-type="wrist">
+        <span class="chooser-img"><img src="./thumbs/chooser-wrist.webp" alt="" width="640" height="480" /></span>
+        <b data-i18n="choose.wrist">Наручные</b><small class="chooser-from" data-from="wrist"></small>
+      </button>
+      <button class="chooser-card" type="button" data-type="pocket">
+        <span class="chooser-img"><img src="./thumbs/chooser-pocket.webp" alt="" width="640" height="480" /></span>
+        <b data-i18n="choose.pocket">Карманные</b><small class="chooser-from" data-from="pocket"></small>
+      </button>
+    </div>
+  </section>
+
+  <main class="layout">
+    <section class="left">
+      <div class="intro">
+        <a class="back-type" href="./index.html" data-i18n="back.type">← Тип часов</a>
+        <h1 data-i18n="h1">Конструктор часов</h1>
+        <p class="lead" data-i18n="lead">Создайте уникальные часы «Луч» — от&nbsp;дизайна до&nbsp;мельчайших деталей</p>
+        <ul class="perks">
+          <li><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i18n="perk.quality">Качество<br />с 1953 года</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M3 21V10l5 3V10l5 3V6l3-3h2l1 3v15z"/><path d="M3 21h18M7 17h2M11 17h2M15 17h2"/></svg><span data-i18n="perk.factory">Собственное<br />производство</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M6 4h12l3 5-9 11L3 9z"/><path d="M3 9h18M9 4l3 16M15 4l-3 16M9 4L7.5 9M15 4l1.5 5"/></svg><span data-i18n="perk.design">Индивидуальный<br />дизайн</span></li>
+        </ul>
+      </div>
+
+      <div class="builder">
+        <ol class="steps" role="tablist">
+          <li><button data-step="1" role="tab"><b>1</b><span><span data-i18n="step.1">Индикация</span><small data-i18n="step.1s">Механизм и стрелки</small></span></button></li>
+          <li><button data-step="2" role="tab"><b>2</b><span><span data-i18n="step.2">Корпус</span><small data-i18n="step.2s">Сталь или медь</small></span></button></li>
+          <li><button data-step="3" role="tab"><b>3</b><span><span data-i18n="step.3">Циферблат</span><small data-i18n="step.3s">Цвет и отделка</small></span></button></li>
+          <li><button data-step="4" role="tab"><b>4</b><span><span data-i18n="step.4">Ремешок</span><small data-i18n="step.4s">Материал и цвет</small></span></button></li>
+          <li><button data-step="5" role="tab"><b>5</b><span><span data-i18n="step.5">Луч Pay</span><small data-i18n="step.5s">Оплата, метро, пропуск</small></span></button></li>
+          <li><button data-step="6" role="tab"><b>6</b><span><span data-i18n="step.6">Гравировка</span><small data-i18n="step.6s">Надпись на крышке</small></span></button></li>
+          <li><button data-step="7" role="tab"><b>7</b><span><span data-i18n="step.7">Итог</span><small data-i18n="step.7s">Проверьте и закажите</small></span></button></li>
+        </ol>
+
+        <div class="panels">
+          <section class="panel" data-step="1">
+            <h3><span data-i18n="h.indication">Индикация</span> <button class="info" type="button" data-i18n-tip="info.indication" aria-label="i">i</button></h3>
+            <div class="cards" data-group="indication"></div>
+          </section>
+          <section class="panel" data-step="2">
+            <h3><span data-i18n="h.case">Корпус</span> <button class="info" type="button" data-i18n-tip="info.case" aria-label="i">i</button></h3>
+            <div class="cards" data-group="case"></div>
+          </section>
+          <section class="panel" data-step="3">
+            <h3><span data-i18n="h.dial">Циферблат</span> <button class="info" type="button" data-i18n-tip="info.dial" aria-label="i">i</button></h3>
+            <div class="cards" data-group="dial"></div>
+          </section>
+          <section class="panel" data-step="4">
+            <h3><span data-i18n="h.strap">Ремешок</span> <button class="info" type="button" data-i18n-tip="info.strap" aria-label="i">i</button></h3>
+            <div class="cards" data-group="strap"></div>
+          </section>
+          <section class="panel pay" data-step="5">
+            <h3><span data-i18n="h.pay">Луч Pay</span> <button class="info" type="button" data-i18n-tip="info.pay" aria-label="i">i</button></h3>
+            <div class="cards cards-wide" data-group="pay">
+              <button class="card" type="button" data-id="off" aria-pressed="true"><span class="thumb"><img src="./thumbs/pay-off.webp" alt="" /></span><span data-i18n="pay.off">Без чипа</span><small>0 BYN</small></button>
+              <button class="card" type="button" data-id="on" aria-pressed="false"><span class="thumb"><img src="./thumbs/pay-on.webp" alt="" /></span><span data-i18n="pay.on">Луч Pay</span><small>+69 BYN</small></button>
+            </div>
+            <p class="pay-lead" data-i18n="pay.lead">Часы остаются классикой, а в ремешке спрятан кармашек с двумя чипами.</p>
+            <ul class="pay-features">
+              <li><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M14 14.5a2.5 2.5 0 015 0M15.5 14.5a1 1 0 012 0" stroke="var(--copper)"/></svg><span data-i18n="pay.f.pay">Оплата — мини-карта банка-партнёра</span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M4 19l3.5-12h1L12 15l3.5-8h1L20 19"/><path d="M3 19h18" stroke="var(--copper)"/></svg><span data-i18n="pay.f.metro">Метро — той же картой</span></li>
+              <li><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="M8.5 16.5c.8-1.6 2-2.4 3.5-2.4s2.7.8 3.5 2.4"/><path d="M10 6h4" stroke="var(--copper)"/></svg><span data-i18n="pay.f.pass">Пропуск в университет или офис — второй чип</span></li>
+            </ul>
+            <div class="pay-note" hidden>
+              <span data-i18n="pay.note">Металл глушит чип: для «Луч Pay» нужен кожаный, текстильный или NATO ремешок.</span>
+              <button class="pay-goto-strap" type="button" data-i18n="pay.goto">Выбрать ремешок</button>
+            </div>
+          </section>
+          <section class="panel engr" data-step="6">
+            <h3><span data-i18n="h.engraving">Гравировка</span> <button class="info" type="button" data-i18n-tip="info.engraving" aria-label="i">i</button></h3>
+            <label class="engr-field">
+              <input id="engraving" type="text" maxlength="24" autocomplete="off" data-i18n-placeholder="engr.placeholder" placeholder="Например: Дзякуй, тата!" />
+              <span class="engr-price">+40 BYN</span>
+            </label>
+            <button class="show-back" type="button" data-i18n="engr.back">Показать крышку</button>
+            <div class="engr-note pay-note" hidden>
+              <span data-i18n="engr.note">NATO проходит под корпусом и закрывает заднюю крышку — гравировку не будет видно.</span>
+              <button class="engr-goto-strap pay-goto-strap" type="button" data-i18n="pay.goto">Выбрать ремешок</button>
+            </div>
+          </section>
+          <section class="panel summary" data-step="7">
+            <h3 data-i18n="h.summary">Ваша конфигурация</h3>
+            <dl class="summary-list"></dl>
+            <p class="combos" data-i18n="sum.combos">Одна из 576 комбинаций</p>
+          </section>
+        </div>
+      </div>
+
+      <div class="orderbar">
+        <div class="mini"><img alt="" class="mini-img" /></div>
+        <div class="orderbar-title"><b data-i18n="bar.title">Ваши часы «Луч»</b><span data-i18n="bar.sub">Индивидуальный дизайн</span></div>
+        <div class="price"><span class="price-num">399</span>&nbsp;BYN <button class="info price-info" type="button" aria-expanded="false" data-i18n-aria="pb.title">i</button><div class="price-pop" role="dialog" hidden></div></div>
+        <button class="cta" type="button"><span data-i18n="cta">Добавить в заказ</span> <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section class="stage">
+      <canvas id="watch3d"></canvas>
+      <div class="stage-fallback" hidden data-i18n="3d.na">3D-просмотр недоступен в этом браузере</div>
+      <button class="badge-3d" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>
+        <span><b data-i18n="3d.title">3D-просмотр</b><small data-i18n="3d.sub">Поворачивайте часы и смотрите детали</small></span>
+      </button>
+      <button class="badge-360" type="button" data-i18n-aria="rotate" aria-label="Автоповорот 360°">
+        <svg viewBox="0 0 40 40"><path d="M8 22c0 4 5.5 7 12 7s12-3 12-7"/><path d="M28 30.5l4-1.5-1-4"/><path d="M20 6v3M20 6l-1.5 1.5M20 6l1.5 1.5"/></svg>
+        <span>360°</span>
+      </button>
+      <ul class="assurances">
+        <li><svg viewBox="0 0 24 24"><path d="M6 4h12l3 5-9 11L3 9z"/><path d="M3 9h18"/></svg><span data-i18n="as.warranty">Гарантия<br />2 года</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 2-2 3-5 3"/></svg><span data-i18n="as.consult">Консультация<br />специалиста</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span data-i18n="as.delivery">Доставка<br />по всему миру</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <button class="chat" type="button" data-i18n-aria="chat" aria-label="Чат с консультантом">
+    <svg viewBox="0 0 24 24"><path d="M4 5h12a2 2 0 012 2v6a2 2 0 01-2 2H9l-4 3v-3H4a2 2 0 01-2-2V7a2 2 0 012-2z"/><path d="M18 9h2a2 2 0 012 2v5a2 2 0 01-2 2h-1v3l-4-3h-3"/></svg>
+  </button>
+
+  <dialog class="order" id="order">
+    <form method="dialog" class="order-inner">
+      <button class="close" value="close" data-i18n-aria="close" aria-label="Закрыть">×</button>
+      <div class="order-step order-review">
+        <img class="order-img" alt="" />
+        <h2 data-i18n="bar.title">Ваши часы «Луч»</h2>
+        <dl class="summary-list"></dl>
+        <div class="order-total"><span data-i18n="order.total">Итого</span><b><span class="price-num">399</span>&nbsp;BYN</b></div>
+        <p class="order-note" data-i18n="order.note">Изготовление 5–7 дней · Гарантия 2 года</p>
+        <button class="cta wide" value="send" type="submit" autofocus><span data-i18n="order.send">Отправить заявку</span> <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="order-step order-done" hidden>
+        <div class="done-mark">✓</div>
+        <h2 data-i18n="done.title">Заявка принята</h2>
+        <p data-i18n="done.text">Мастер свяжется с вами, чтобы подтвердить детали сборки.</p>
+        <button class="cta wide" value="close" data-i18n="done.ok">Готово</button>
+      </div>
+      <p class="demo-note" data-i18n="demo">Прототип команды ProfitLab для хакатона «Луч × БГУ». Цены ориентировочные, заявка не отправляется.</p>
+    </form>
+  </dialog>
+
+</body>
+</html>
